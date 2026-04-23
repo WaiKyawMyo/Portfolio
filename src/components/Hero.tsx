@@ -41,7 +41,7 @@ export default function Hero() {
       className="pb-8 md:pd-0 relative min-h-screen flex items-center justify-center mt-2 pt-20 overflow-hidden "
       id=""
     >
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-0 items-center relative z-10">
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12  lg:gap-0 items-center relative z-10">
         {/* LEFT SIDE: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

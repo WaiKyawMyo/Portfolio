@@ -9,7 +9,22 @@ import {
 import { Menu, Code2 } from "lucide-react";
 import { Icons } from "./Icons";
 import { SiBehance } from "react-icons/si";
+const handleDownloadCV = () => {
+    // 1. Point to the file in your public folder
+    const fileUrl = "/WaiKyawMyo_CV.pdf";
 
+    // 2. Create a hidden anchor element
+    const link = document.createElement("a");
+    link.href = fileUrl;
+
+    // 3. Set the name you want the file to have when downloaded
+    link.setAttribute("download", "WaiKyawMyo_CV.pdf");
+
+    // 4. Append to body, click it, and remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
@@ -134,7 +149,7 @@ const Header = () => {
                     <Icons.LinkedIN className="text-zinc-400 size-5" />
                   </a>
                 </div>
-                <Button className="w-full mt-4">Download Resume</Button>
+                <Button onClick={handleDownloadCV} className="w-full mt-4">Download Resume</Button>
               </div>
             </SheetContent>
           </Sheet>
