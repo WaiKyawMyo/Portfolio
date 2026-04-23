@@ -12,8 +12,9 @@ import { SiBehance } from "react-icons/si";
 
 const navItems = [
   { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+
   { name: "Contact", href: "#contact" },
 ];
 
