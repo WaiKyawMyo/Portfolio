@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Layers } from "lucide-react";
 import { Icons } from "./Icons";
-import Etutor from "@/assets/Etutor.png";
-import { Link } from "react-router";
 import { SiBehance } from "react-icons/si";
-import HomelessIMG from "@/assets/Purple App Phone Mockup Sales Marketing Presentation.png"
-import OPOM from "@/assets/photo_2026-04-23_16-36-12.jpg"
-const projects = [
+
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+  image: string;
+  color: string;
+  github?: string;
+  Behance?: string;
+}
+
+const projects: Project[] = [
   {
     title: "E-Tutor Platform Design",
     description:
@@ -15,7 +23,8 @@ const projects = [
     link: "https://www.figma.com/proto/4cUIOffAxVO7NmyrYrTJg1/Project?node-id=9-240&viewport=1349%2C318%2C0.16&t=jRwAy76bcVjLJpk2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A240&page-id=0%3A1",
     Behance:
       "https://www.behance.net/gallery/247772831/Proton-E-Tutoring-System-UXUI-Case-Study",
-    image: Etutor,
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+    color: "from-blue-500 to-cyan-500",
   },
   {
     title: "The Haven Hub – Homeless Support App",
@@ -25,8 +34,7 @@ const projects = [
     link: "https://yxn5au.axshare.com/?id=eejhjj&g=14",
     Behance:
       "https://www.behance.net/gallery/248103959/The-Haven-Hub-Homeless-Support-App",
-    image:
-       HomelessIMG,
+    image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=800&auto=format&fit=crop",
     color: "from-purple-500 to-fuchsia-500",
   },
   {
@@ -34,17 +42,15 @@ const projects = [
     description:
       "One Project One Month (OPOM) is a platform where developers and designers work together to build one real project in one month. It helps turn ideas into finished products with deadlines, teamwork, and real-world experience for your portfolio.",
     tech: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
-    link: "https://www.one-project-one-month.com/ ",
-    
-    image:
-      OPOM,
+    link: "https://www.one-project-one-month.com/",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     color: "from-emerald-500 to-cyan-500",
   },
 ];
 
 export default function ProjectSection() {
   return (
-    <section  id="projects" lassName="py-24 px-6 relative">
+    <section id="projects" className="py-24 px-6 relative bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
@@ -60,7 +66,7 @@ export default function ProjectSection() {
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects</span>
             </h2>
           </div>
-          <p className="text-slate-400 max-w-md text-lg">
+          <p className="text-zinc-400 max-w-md text-lg">
             A collection of digital products where I combine technical logic
             with user-centric design.
           </p>
@@ -112,7 +118,7 @@ export default function ProjectSection() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
                     {project.description}
                   </p>
 
@@ -121,7 +127,7 @@ export default function ProjectSection() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-[11px] font-medium text-slate-500"
+                        className="text-[11px] font-medium text-zinc-500"
                       >
                         #{t}
                       </span>
@@ -129,31 +135,34 @@ export default function ProjectSection() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex items-center gap-4">
-                    <Link
+                  <div className="flex items-center gap-4 mt-auto">
+                    <a
                       target="_blank"
-                      to={project.link}
+                      rel="noopener noreferrer"
+                      href={project.link}
                       className="flex items-center gap-2 text-white font-bold text-sm hover:text-cyan-400 transition-colors"
                     >
                       <ExternalLink size={18} /> Live Demo
-                    </Link>
+                    </a>
                     {project.github && (
-                      <Link
+                      <a
                         target="_blank"
-                        to={project.github}
-                        className="flex items-center gap-2 text-slate-400 font-bold text-sm hover:text-white transition-colors"
+                        rel="noopener noreferrer"
+                        href={project.github}
+                        className="flex items-center gap-2 text-zinc-400 font-bold text-sm hover:text-white transition-colors"
                       >
                         <Icons.Github className="size-4" /> Code
-                      </Link>
+                      </a>
                     )}
                     {project.Behance && (
-                      <Link
-                        target="_Blant"
-                        to={project.Behance}
-                        className="flex items-center gap-2 text-slate-400 font-bold text-sm hover:text-white transition-colors"
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={project.Behance}
+                        className="flex items-center gap-2 text-zinc-400 font-bold text-sm hover:text-white transition-colors"
                       >
-                        <SiBehance className="size-5" /> View Case Study
-                      </Link>
+                        <SiBehance className="size-5" /> Case Study
+                      </a>
                     )}
                   </div>
                 </div>
