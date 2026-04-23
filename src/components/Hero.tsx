@@ -47,7 +47,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6 ml-20"
+          className="space-y-6 lg:ml-20 "
         >
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-blue-400 font-medium tracking-widest uppercase text-sm mb-2">
