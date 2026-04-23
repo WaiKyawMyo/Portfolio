@@ -70,7 +70,7 @@ export default function ContactSection() {
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">
                 Let's start a <br />
-                <span className="text-zinc-500">new project</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">new project</span>
               </h2>
               <p className="text-zinc-400 text-lg max-w-md leading-relaxed">
                 I'm always open to discussing new projects, creative ideas or 
