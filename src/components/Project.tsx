@@ -52,7 +52,7 @@ const projects: Project[] = [
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="py-24 px-6 relative bg-zinc-950">
+    <section id="projects" className="py-24 px-6 relative ">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
