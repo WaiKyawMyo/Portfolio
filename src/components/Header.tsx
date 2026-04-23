@@ -24,8 +24,8 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="bg-primary p-1.5 rounded-lg">
-            <Code2 className="h-5 w-5 text-primary-foreground" />
+          <div className="bg-primary-foreground p-1.5 rounded-lg">
+            <Code2 className="h-5 w-5 text-primary" />
           </div>
           <span className="text-xl font-bold tracking-tight text-white">
             MYO<span className="text-blue-400">.DEV</span>

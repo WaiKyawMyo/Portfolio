@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { ExternalLink, Layers } from "lucide-react";
 import { Icons } from "./Icons";
 import { SiBehance } from "react-icons/si";
-
+import Etutor from "@/assets/Etutor.png";
+import Haven from "@/assets/Purple App Phone Mockup Sales Marketing Presentation.png";
+import opom from "@/assets/photo_2026-04-23_16-36-12.jpg";
 interface Project {
   title: string;
   description: string;
@@ -23,18 +25,18 @@ const projects: Project[] = [
     link: "https://www.figma.com/proto/4cUIOffAxVO7NmyrYrTJg1/Project?node-id=9-240&viewport=1349%2C318%2C0.16&t=jRwAy76bcVjLJpk2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A240&page-id=0%3A1",
     Behance:
       "https://www.behance.net/gallery/247772831/Proton-E-Tutoring-System-UXUI-Case-Study",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+    image: Etutor,
     color: "from-blue-500 to-cyan-500",
   },
   {
     title: "The Haven Hub – Homeless Support App",
     description:
       "Haven Hub is a mobile app that helps homeless individuals quickly find shelters, food, and support. The design focuses on simplicity and easy access to help.",
-    tech: ["Axure RP", "Figma","UI/UX Design","Prototyping"],
+    tech: ["Axure RP", "Figma", "UI/UX Design", "Prototyping"],
     link: "https://yxn5au.axshare.com/?id=eejhjj&g=14",
     Behance:
       "https://www.behance.net/gallery/248103959/The-Haven-Hub-Homeless-Support-App",
-    image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=800&auto=format&fit=crop",
+    image: Haven,
     color: "from-purple-500 to-fuchsia-500",
   },
   {
@@ -43,7 +45,7 @@ const projects: Project[] = [
       "One Project One Month (OPOM) is a platform where developers and designers work together to build one real project in one month. It helps turn ideas into finished products with deadlines, teamwork, and real-world experience for your portfolio.",
     tech: ["Figma", "UI/UX Design", "Wireframing", "Prototyping"],
     link: "https://www.one-project-one-month.com/",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    image: opom,
     color: "from-emerald-500 to-cyan-500",
   },
 ];
@@ -63,7 +65,10 @@ export default function ProjectSection() {
               <Layers size={16} /> My Creative Works
             </motion.div>
             <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects</span>
+              Featured{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                Projects
+              </span>
             </h2>
           </div>
           <p className="text-zinc-400 max-w-md text-lg">

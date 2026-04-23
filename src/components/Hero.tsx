@@ -41,13 +41,13 @@ export default function Hero() {
       className="pb-8 md:pd-0 relative min-h-screen flex items-center justify-center mt-2 pt-20 overflow-hidden "
       id=""
     >
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-0 items-center relative z-10">
         {/* LEFT SIDE: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-6 ml-20"
         >
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-blue-400 font-medium tracking-widest uppercase text-sm mb-2">
@@ -131,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-center"
         >
           {/* 3D Tilt Wrapper */}
           <motion.div
