@@ -121,7 +121,7 @@ export default function ContactSection() {
                   <p className="text-xs text-zinc-500 uppercase font-bold tracking-wider">
                     Location
                   </p>
-                  <p className="text-white font-medium">Yangon, Myanmar</p>
+                  <p className="text-white font-medium">Bangkok, Thailand</p>
                 </div>
               </div>
             </div>
